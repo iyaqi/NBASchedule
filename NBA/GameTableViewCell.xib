@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="GameTableViewCell" customModule="NBA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="波士顿" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17P-kT-Diq">
+                        <rect key="frame" x="248" y="17" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主场:TD北岸花园" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-pi-lNc">
+                        <rect key="frame" x="103.5" y="36.5" width="113.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日期:2017年10月2日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="379-xx-7cI">
+                        <rect key="frame" x="103.5" y="57.5" width="113" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黄蜂" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-hn-4GU">
+                        <rect key="frame" x="29" y="48" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夏洛特" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWY-B8-ngt">
+                        <rect key="frame" x="20" y="17" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v07-a0-3DG">
+                        <rect key="frame" x="149" y="7" width="23" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.87843137979507446" green="0.28235295414924622" blue="0.42352941632270813" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="凯尔特人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqq-jS-oKz">
+                        <rect key="frame" x="239.5" y="48" width="69.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v07-a0-3DG" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="63Q-gl-ciZ"/>
+                    <constraint firstItem="Tqq-jS-oKz" firstAttribute="centerX" secondItem="17P-kT-Diq" secondAttribute="centerX" id="DbN-0t-3H7"/>
+                    <constraint firstItem="Cfi-pi-lNc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="GFz-wO-fHY"/>
+                    <constraint firstItem="379-xx-7cI" firstAttribute="leading" secondItem="Cfi-pi-lNc" secondAttribute="leading" id="GoC-Rb-R1G"/>
+                    <constraint firstItem="Cfi-pi-lNc" firstAttribute="top" secondItem="v07-a0-3DG" secondAttribute="bottom" constant="8" id="OVm-WR-tS8"/>
+                    <constraint firstItem="v07-a0-3DG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Ro8-sa-PPx"/>
+                    <constraint firstItem="379-xx-7cI" firstAttribute="top" secondItem="Cfi-pi-lNc" secondAttribute="bottom" constant="5" id="SYt-ds-FyV"/>
+                    <constraint firstItem="Tqq-jS-oKz" firstAttribute="top" secondItem="17P-kT-Diq" secondAttribute="bottom" constant="10" id="T6k-h6-bZl"/>
+                    <constraint firstItem="f7n-hn-4GU" firstAttribute="centerX" secondItem="TWY-B8-ngt" secondAttribute="centerX" id="Yx4-fP-D0s"/>
+                    <constraint firstItem="TWY-B8-ngt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="eNN-ZK-FFZ"/>
+                    <constraint firstItem="f7n-hn-4GU" firstAttribute="top" secondItem="TWY-B8-ngt" secondAttribute="bottom" constant="10" id="emY-fD-WWu"/>
+                    <constraint firstAttribute="trailing" secondItem="17P-kT-Diq" secondAttribute="trailing" constant="20" id="gK5-mk-pey"/>
+                    <constraint firstItem="TWY-B8-ngt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="myk-S9-lze"/>
+                    <constraint firstItem="379-xx-7cI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="npH-3V-IaJ"/>
+                    <constraint firstItem="17P-kT-Diq" firstAttribute="top" secondItem="TWY-B8-ngt" secondAttribute="top" id="tol-kR-tYH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="awayTeamCity" destination="17P-kT-Diq" id="XQG-7T-NTD"/>
+                <outlet property="awayTeamName" destination="Tqq-jS-oKz" id="5BA-Rx-bCN"/>
+                <outlet property="gameAddress" destination="Cfi-pi-lNc" id="LBM-5R-htd"/>
+                <outlet property="gameDate" destination="379-xx-7cI" id="BKW-dd-DUT"/>
+                <outlet property="homeTeamCity" destination="TWY-B8-ngt" id="Ikl-Bc-SJH"/>
+                <outlet property="homeTeamName" destination="f7n-hn-4GU" id="uR1-Jn-oOn"/>
+            </connections>
+            <point key="canvasLocation" x="12" y="-34"/>
+        </tableViewCell>
+    </objects>
+</document>
