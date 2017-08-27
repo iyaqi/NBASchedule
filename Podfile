@@ -12,6 +12,7 @@ target 'NBA' do
   pod 'SwiftyJSON'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'NVActivityIndicatorView'
-
+  pod 'ImageLoader'
+  pod 'SnapKit', '~> 3.2.0'
 
 end

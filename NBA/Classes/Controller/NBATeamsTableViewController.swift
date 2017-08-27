@@ -10,14 +10,28 @@ import UIKit
 import Alamofire
 import NVActivityIndicatorView
 import SwiftyJSON
+import ImageLoader
+
 
 class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorViewable {
     lazy var teamsData = [Array<Team>]()
-
+    var logoInfo:[String:Any]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.tableFooterView = UIView()
+        self.tableView.rowHeight = 50;
+        
+        let path = Bundle.main.path(forResource: "Team_Logo", ofType: ".json")
+        do {
+            let logoJsonData = NSData(contentsOfFile: path!)
+            logoInfo = try JSON(data: logoJsonData! as Data).dictionaryValue
+        } catch  {
+            print("Invalid filename/path.")
+        }
+        
+
         self.fetchNBATeams()
     }
     
@@ -30,7 +44,7 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
             for teams in listGroups{
                 var tempArray = [Team]()
                 for teamJson in teams["teams"].arrayValue{
-                    print(teamJson["profile"].rawString()!)
+//                    print(teamJson["profile"].rawString()!)
                     let team = Team(JSONString: teamJson["profile"].rawString()!)
                     tempArray.append(team!)
                 }
@@ -64,7 +78,12 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
         let team = teamsArray[indexPath.row]
         
         cell?.textLabel?.text = team.name
-
+        
+        let a = self.logoInfo?[team.code!]!
+        
+        let imageUrlString = "http://mat1.gtimg.com/sports/nba/logo/1602/\(String(describing: a!)).png"
+        cell?.imageView?.load.request(with: imageUrlString)
+        
         return cell!
     }
     
@@ -77,6 +96,16 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
         let teamScheduleView = NBATeamScheduleTableViewController()
         teamScheduleView.code = team.code!
         self.navigationController?.pushViewController(teamScheduleView, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let teamsArray = self.teamsData[section]
+        let team = teamsArray[0]
+        return team.displayConference
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 
 }

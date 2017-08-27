@@ -19,6 +19,7 @@
 		8DEBB6A51F52A38400A33117 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB69E1F52A38400A33117 /* Team.swift */; };
 		8DEBB6A61F52A38400A33117 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */; };
 		8DEBB6A71F52A38400A33117 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */; };
+		8DEBB6A91F52B27600A33117 /* Team_Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A81F52B27600A33117 /* Team_Logo.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8DEBB69E1F52A38400A33117 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
+		8DEBB6A81F52B27600A33117 /* Team_Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Team_Logo.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				8DEBB6881F52A34F00A33117 /* LaunchScreen.storyboard */,
 				8DEBB68A1F52A34F00A33117 /* Main.storyboard */,
 				8DEBB68C1F52A34F00A33117 /* Info.plist */,
+				8DEBB6A81F52B27600A33117 /* Team_Logo.json */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DEBB6A91F52B27600A33117 /* Team_Logo.json in Resources */,
 				8DEBB6951F52A34F00A33117 /* LaunchScreen.storyboard in Resources */,
 				8DEBB6A71F52A38400A33117 /* GameTableViewCell.xib in Resources */,
 				8DEBB6941F52A34F00A33117 /* Assets.xcassets in Resources */,
@@ -400,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LE62BULYDB;
-				INFOPLIST_FILE = NBA/Info.plist;
+				INFOPLIST_FILE = NBA/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hn.pds.dodge.NBA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,7 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LE62BULYDB;
-				INFOPLIST_FILE = NBA/Info.plist;
+				INFOPLIST_FILE = NBA/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hn.pds.dodge.NBA;
 				PRODUCT_NAME = "$(TARGET_NAME)";

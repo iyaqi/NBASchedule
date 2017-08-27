@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import NVActivityIndicatorView
+import SnapKit
 
 
 class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndicatorViewable {
@@ -19,14 +20,59 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableView.register(UINib.init(nibName: "GameTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "schedule")
-        self.tableView.tableFooterView = UIView()
         
-        startAnimating(CGSize(width: 30, height: 30),type:.ballBeat,color: UIColor.init(hexString: "#E0486C"),backgroundColor:UIColor.white)
+        self .initSubView()
+        
         self.fetchSchedule()
     }
     
+    func initSubView(){
+        self.tableView.register(UINib.init(nibName: "GameTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "schedule")
+        self.tableView.tableFooterView = UIView()
+        
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: self.view.width, height: 50))
+        print(self.view.width)
+        self.tableView.tableHeaderView = header
+        
+        let homeLabel = UILabel()
+        homeLabel.text = "主场"
+        homeLabel.textAlignment = .left
+        homeLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        homeLabel.textColor = UIColor.red
+        header.addSubview(homeLabel)
+        homeLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(header).offset(20)
+            make.bottom.equalTo(header).offset(-5)
+            make.width.equalTo(100)
+        }
+        
+        
+        let awayLabel = UILabel()
+        awayLabel.text = "客场"
+        awayLabel.textAlignment = .right
+        awayLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        awayLabel.textColor = UIColor.blue
+        header.addSubview(awayLabel)
+        awayLabel.snp.makeConstraints { (make) in
+            make.right.equalTo(header).offset(-20)
+            make.bottom.equalTo(header).offset(-5)
+            make.width.equalTo(100)
+        }
+        
+        let line = UILabel()
+        line.backgroundColor = UIColor.lightGray
+        line.alpha = 0.4
+        header.addSubview(line)
+        line.snp.makeConstraints { (make) in
+            make.right.left.equalTo(header)
+            make.bottom.equalTo(header)
+            make.height.equalTo(0.8)
+        }
+
+    }
+    
     func fetchSchedule(){
+        startAnimating(CGSize(width: 30, height: 30),type:.ballBeat,color: UIColor.init(hexString: "#E0486C"),backgroundColor:UIColor.white)
         Alamofire.request("http://china.nba.com/static/data/team/schedule_\(self.code).json").responseJSON { (response) in
     
         // swiftJson的解析方式
@@ -65,18 +111,18 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
     //                    }
     //                }
     //            }
-    self.tableView.reloadData()
-    self.stopAnimating()
-    }
+            self.tableView.reloadData()
+            self.stopAnimating()
+        }
     }
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.datas.count
+        return self.datas.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -95,4 +141,5 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
 }
