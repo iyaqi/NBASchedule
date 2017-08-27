@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4ABF1D82BADF558F29804B46 /* Pods_NBA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E0124AE16140D9D91E5095 /* Pods_NBA.framework */; };
-		8DBCA2D71F42D4E800D0B214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCA2D61F42D4E800D0B214 /* AppDelegate.swift */; };
-		8DBCA2D91F42D4E800D0B214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCA2D81F42D4E800D0B214 /* ViewController.swift */; };
-		8DBCA2DC1F42D4E800D0B214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCA2DA1F42D4E800D0B214 /* Main.storyboard */; };
-		8DBCA2DE1F42D4E800D0B214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCA2DD1F42D4E800D0B214 /* Assets.xcassets */; };
-		8DBCA2E11F42D4E800D0B214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBCA2DF1F42D4E800D0B214 /* LaunchScreen.storyboard */; };
-		8DBCA2F11F49C8E700D0B214 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBCA2F01F49C8E700D0B214 /* Game.swift */; };
-		8DEBB6751F51B4BF00A33117 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6731F51B4BF00A33117 /* GameTableViewCell.swift */; };
-		8DEBB6761F51B4BF00A33117 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6741F51B4BF00A33117 /* GameTableViewCell.xib */; };
+		8DEBB6931F52A34F00A33117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6861F52A34F00A33117 /* AppDelegate.swift */; };
+		8DEBB6941F52A34F00A33117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6871F52A34F00A33117 /* Assets.xcassets */; };
+		8DEBB6951F52A34F00A33117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6881F52A34F00A33117 /* LaunchScreen.storyboard */; };
+		8DEBB6961F52A34F00A33117 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB68A1F52A34F00A33117 /* Main.storyboard */; };
+		8DEBB6971F52A34F00A33117 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB68C1F52A34F00A33117 /* Info.plist */; };
+		8DEBB6A21F52A38400A33117 /* NBATeamScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB69A1F52A38400A33117 /* NBATeamScheduleTableViewController.swift */; };
+		8DEBB6A31F52A38400A33117 /* NBATeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB69B1F52A38400A33117 /* NBATeamsTableViewController.swift */; };
+		8DEBB6A41F52A38400A33117 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB69D1F52A38400A33117 /* Game.swift */; };
+		8DEBB6A51F52A38400A33117 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB69E1F52A38400A33117 /* Team.swift */; };
+		8DEBB6A61F52A38400A33117 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */; };
+		8DEBB6A71F52A38400A33117 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,15 +26,17 @@
 		52D0ED7BF6A9EA113F513CFB /* Pods-NBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBA/Pods-NBA.debug.xcconfig"; sourceTree = "<group>"; };
 		69E0124AE16140D9D91E5095 /* Pods_NBA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBCA2D31F42D4E800D0B214 /* NBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DBCA2D61F42D4E800D0B214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8DBCA2D81F42D4E800D0B214 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8DBCA2DB1F42D4E800D0B214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8DBCA2DD1F42D4E800D0B214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8DBCA2E01F42D4E800D0B214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8DBCA2E21F42D4E800D0B214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DBCA2F01F49C8E700D0B214 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		8DEBB6731F51B4BF00A33117 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
-		8DEBB6741F51B4BF00A33117 /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
+		8DEBB6861F52A34F00A33117 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DEBB6871F52A34F00A33117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DEBB6891F52A34F00A33117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DEBB68B1F52A34F00A33117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8DEBB68C1F52A34F00A33117 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DEBB69A1F52A38400A33117 /* NBATeamScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBATeamScheduleTableViewController.swift; sourceTree = "<group>"; };
+		8DEBB69B1F52A38400A33117 /* NBATeamsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBATeamsTableViewController.swift; sourceTree = "<group>"; };
+		8DEBB69D1F52A38400A33117 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8DEBB69E1F52A38400A33117 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +72,59 @@
 		8DBCA2D51F42D4E800D0B214 /* NBA */ = {
 			isa = PBXGroup;
 			children = (
-				8DBCA2D61F42D4E800D0B214 /* AppDelegate.swift */,
-				8DBCA2D81F42D4E800D0B214 /* ViewController.swift */,
-				8DBCA2DA1F42D4E800D0B214 /* Main.storyboard */,
-				8DBCA2DD1F42D4E800D0B214 /* Assets.xcassets */,
-				8DBCA2DF1F42D4E800D0B214 /* LaunchScreen.storyboard */,
-				8DBCA2E21F42D4E800D0B214 /* Info.plist */,
-				8DBCA2F01F49C8E700D0B214 /* Game.swift */,
-				8DEBB6731F51B4BF00A33117 /* GameTableViewCell.swift */,
-				8DEBB6741F51B4BF00A33117 /* GameTableViewCell.xib */,
+				8DEBB6981F52A38400A33117 /* Classes */,
+				8DEBB6851F52A34F00A33117 /* Support */,
 			);
 			path = NBA;
+			sourceTree = "<group>";
+		};
+		8DEBB6851F52A34F00A33117 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBB6861F52A34F00A33117 /* AppDelegate.swift */,
+				8DEBB6871F52A34F00A33117 /* Assets.xcassets */,
+				8DEBB6881F52A34F00A33117 /* LaunchScreen.storyboard */,
+				8DEBB68A1F52A34F00A33117 /* Main.storyboard */,
+				8DEBB68C1F52A34F00A33117 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		8DEBB6981F52A38400A33117 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBB6991F52A38400A33117 /* Controller */,
+				8DEBB69C1F52A38400A33117 /* Model */,
+				8DEBB69F1F52A38400A33117 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8DEBB6991F52A38400A33117 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBB69A1F52A38400A33117 /* NBATeamScheduleTableViewController.swift */,
+				8DEBB69B1F52A38400A33117 /* NBATeamsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8DEBB69C1F52A38400A33117 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBB69D1F52A38400A33117 /* Game.swift */,
+				8DEBB69E1F52A38400A33117 /* Team.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DEBB69F1F52A38400A33117 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */,
+				8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AB83AE22B8B68E76199216D7 /* Pods */ = {
@@ -160,10 +207,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBCA2E11F42D4E800D0B214 /* LaunchScreen.storyboard in Resources */,
-				8DBCA2DE1F42D4E800D0B214 /* Assets.xcassets in Resources */,
-				8DBCA2DC1F42D4E800D0B214 /* Main.storyboard in Resources */,
-				8DEBB6761F51B4BF00A33117 /* GameTableViewCell.xib in Resources */,
+				8DEBB6951F52A34F00A33117 /* LaunchScreen.storyboard in Resources */,
+				8DEBB6A71F52A38400A33117 /* GameTableViewCell.xib in Resources */,
+				8DEBB6941F52A34F00A33117 /* Assets.xcassets in Resources */,
+				8DEBB6971F52A34F00A33117 /* Info.plist in Resources */,
+				8DEBB6961F52A34F00A33117 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,30 +270,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBCA2D91F42D4E800D0B214 /* ViewController.swift in Sources */,
-				8DBCA2F11F49C8E700D0B214 /* Game.swift in Sources */,
-				8DBCA2D71F42D4E800D0B214 /* AppDelegate.swift in Sources */,
-				8DEBB6751F51B4BF00A33117 /* GameTableViewCell.swift in Sources */,
+				8DEBB6931F52A34F00A33117 /* AppDelegate.swift in Sources */,
+				8DEBB6A31F52A38400A33117 /* NBATeamsTableViewController.swift in Sources */,
+				8DEBB6A21F52A38400A33117 /* NBATeamScheduleTableViewController.swift in Sources */,
+				8DEBB6A51F52A38400A33117 /* Team.swift in Sources */,
+				8DEBB6A41F52A38400A33117 /* Game.swift in Sources */,
+				8DEBB6A61F52A38400A33117 /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8DBCA2DA1F42D4E800D0B214 /* Main.storyboard */ = {
+		8DEBB6881F52A34F00A33117 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8DBCA2DB1F42D4E800D0B214 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8DBCA2DF1F42D4E800D0B214 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DBCA2E01F42D4E800D0B214 /* Base */,
+				8DEBB6891F52A34F00A33117 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8DEBB68A1F52A34F00A33117 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DEBB68B1F52A34F00A33117 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

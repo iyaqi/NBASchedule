@@ -26,20 +26,19 @@ class GameTableViewCell: UITableViewCell {
     @IBOutlet weak var awayTeamName: UILabel!
     
     
-    func setContent( game:JSON ){
+    func setContent( game:Game ){
         //主场
-        self.homeTeamCity.text = game["homeTeam"]["profile"]["city"].stringValue
-        self.homeTeamName.text = game["homeTeam"]["profile"]["name"].stringValue
-        
+        self.homeTeamCity.text = game.homeTeamCity
+        self.homeTeamName.text = game.homeTeamName
         //客场
-        self.awayTeamCity.text = game["awayTeam"]["profile"]["city"].stringValue
-        self.awayTeamName.text = game["awayTeam"]["profile"]["name"].stringValue
+        self.awayTeamCity.text = game.awayTeamCity
+        self.awayTeamName.text = game.awayTeamName
         
         //主场
-        self.gameAddress.text = "球馆:" + game["profile"]["arenaName"].stringValue
+        self.gameAddress.text = "球馆:" + game.gameAddress!
 
         //日期
-        let date = NSDate.init(timeIntervalSince1970: TimeInterval(game["profile"]["utcMillis"].int64Value/1000) )
+        let date = NSDate.init(timeIntervalSince1970: TimeInterval(Int64(game.gameDate!)!/1000))
         self.gameDate.text = "日期:" + date.string(withFormat: "yyyy年MM月dd日")!
     }
     

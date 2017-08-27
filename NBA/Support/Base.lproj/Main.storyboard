@@ -9,17 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NBA赛程-->
+        <!--NBA球队-->
         <scene sceneID="BfD-fM-hfQ">
             <objects>
-                <tableViewController id="tmt-dj-aNU" customClass="ViewController" customModule="NBA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y6Z-TP-d6p">
+                <tableViewController id="tmt-dj-aNU" customClass="NBATeamsTableViewController" customModule="NBA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Y6Z-TP-d6p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MB3-C1-KGu">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MB3-C1-KGu" id="wZe-DP-BsK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="tmt-dj-aNU" id="oAh-kI-REY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NBA赛程" id="gKF-XL-qli"/>
+                    <navigationItem key="navigationItem" title="NBA球队" id="gKF-XL-qli"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1A-pJ-m4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
