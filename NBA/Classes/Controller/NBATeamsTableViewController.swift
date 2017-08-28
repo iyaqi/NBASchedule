@@ -13,6 +13,7 @@ import SwiftyJSON
 import ImageLoader
 
 
+
 class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorViewable {
     lazy var teamsData = [Array<Team>]()
     var logoInfo:[String:Any]?
@@ -24,12 +25,8 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
         self.tableView.rowHeight = 50;
         
         let path = Bundle.main.path(forResource: "Team_Logo", ofType: ".json")
-        do {
-            let logoJsonData = NSData(contentsOfFile: path!)
-            logoInfo = try JSON(data: logoJsonData! as Data).dictionaryValue
-        } catch  {
-            print("Invalid filename/path.")
-        }
+        let logoJsonData = NSData(contentsOfFile: path!)
+        logoInfo = JSON(data: logoJsonData! as Data).dictionaryValue
         
 
         self.fetchNBATeams()

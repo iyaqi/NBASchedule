@@ -14,5 +14,6 @@ target 'NBA' do
   pod 'NVActivityIndicatorView'
   pod 'ImageLoader'
   pod 'SnapKit', '~> 3.2.0'
+  pod 'zhPopupController', '~> 0.1.3'
 
 end

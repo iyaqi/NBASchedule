@@ -20,6 +20,7 @@
 		8DEBB6A61F52A38400A33117 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */; };
 		8DEBB6A71F52A38400A33117 /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */; };
 		8DEBB6A91F52B27600A33117 /* Team_Logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6A81F52B27600A33117 /* Team_Logo.json */; };
+		8DEBB6AE1F52FBB000A33117 /* CKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6AD1F52FBB000A33117 /* CKAlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,9 @@
 		8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameTableViewCell.xib; sourceTree = "<group>"; };
 		8DEBB6A81F52B27600A33117 /* Team_Logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Team_Logo.json; sourceTree = "<group>"; };
+		8DEBB6AC1F52FBB000A33117 /* CKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAlertViewController.h; sourceTree = "<group>"; };
+		8DEBB6AD1F52FBB000A33117 /* CKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAlertViewController.m; sourceTree = "<group>"; };
+		8DEBB6AF1F52FD9E00A33117 /* NBA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NBA-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		8DBCA2D51F42D4E800D0B214 /* NBA */ = {
 			isa = PBXGroup;
 			children = (
+				8DEBB6AA1F52FB9E00A33117 /* Vender */,
 				8DEBB6981F52A38400A33117 /* Classes */,
 				8DEBB6851F52A34F00A33117 /* Support */,
 			);
@@ -83,6 +88,7 @@
 		8DEBB6851F52A34F00A33117 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				8DEBB6AF1F52FD9E00A33117 /* NBA-Bridging-Header.h */,
 				8DEBB6861F52A34F00A33117 /* AppDelegate.swift */,
 				8DEBB6871F52A34F00A33117 /* Assets.xcassets */,
 				8DEBB6881F52A34F00A33117 /* LaunchScreen.storyboard */,
@@ -128,6 +134,15 @@
 				8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8DEBB6AA1F52FB9E00A33117 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBB6AC1F52FBB000A33117 /* CKAlertViewController.h */,
+				8DEBB6AD1F52FBB000A33117 /* CKAlertViewController.m */,
+			);
+			path = Vender;
 			sourceTree = "<group>";
 		};
 		AB83AE22B8B68E76199216D7 /* Pods */ = {
@@ -183,6 +198,7 @@
 					8DBCA2D21F42D4E800D0B214 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = LE62BULYDB;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -277,6 +293,7 @@
 				8DEBB6931F52A34F00A33117 /* AppDelegate.swift in Sources */,
 				8DEBB6A31F52A38400A33117 /* NBATeamsTableViewController.swift in Sources */,
 				8DEBB6A21F52A38400A33117 /* NBATeamScheduleTableViewController.swift in Sources */,
+				8DEBB6AE1F52FBB000A33117 /* CKAlertViewController.m in Sources */,
 				8DEBB6A51F52A38400A33117 /* Team.swift in Sources */,
 				8DEBB6A41F52A38400A33117 /* Game.swift in Sources */,
 				8DEBB6A61F52A38400A33117 /* GameTableViewCell.swift in Sources */,
@@ -403,11 +420,15 @@
 			baseConfigurationReference = 52D0ED7BF6A9EA113F513CFB /* Pods-NBA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LE62BULYDB;
 				INFOPLIST_FILE = NBA/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hn.pds.dodge.NBA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NBA/Support/NBA-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -417,11 +438,14 @@
 			baseConfigurationReference = 4C4B5F316B506EDEEA193366 /* Pods-NBA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = LE62BULYDB;
 				INFOPLIST_FILE = NBA/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hn.pds.dodge.NBA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NBA/Support/NBA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

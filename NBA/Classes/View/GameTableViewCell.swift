@@ -39,7 +39,7 @@ class GameTableViewCell: UITableViewCell {
 
         //日期
         let date = NSDate.init(timeIntervalSince1970: TimeInterval(Int64(game.gameDate!)!/1000))
-        self.gameDate.text = "日期:" + date.string(withFormat: "yyyy年MM月dd日")!
+        self.gameDate.text = "北京日期:" + date.string(withFormat: "yyyy年MM月dd日 HH:mm")!
     }
     
 }

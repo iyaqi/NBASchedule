@@ -1,15 +1,18 @@
 PODS:
-  - Alamofire (4.4.0)
-  - AlamofireNetworkActivityIndicator (2.1.0):
-    - Alamofire (~> 4.1)
+  - Alamofire (4.5.0)
+  - AlamofireNetworkActivityIndicator (2.2.0):
+    - Alamofire (~> 4.5)
   - ImageLoader (0.12.2)
-  - NVActivityIndicatorView (3.6.1)
-  - ObjectMapper (2.2.5)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
+  - ObjectMapper (2.2.8)
   - SnapKit (3.2.0)
   - SwiftyJSON (3.1.4)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
+  - zhPopupController (0.1.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -20,17 +23,19 @@ DEPENDENCIES:
   - SnapKit (~> 3.2.0)
   - SwiftyJSON
   - YYKit
+  - zhPopupController (~> 0.1.3)
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
   ImageLoader: f461c9641350d0b8df39c2d3785b263f15cd63c2
-  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
-  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  zhPopupController: 6c3b0998b5402e4805a7fc30c0a7df09345bce89
 
-PODFILE CHECKSUM: 912710c3aa53fda8384d1e857a297ef269ac664a
+PODFILE CHECKSUM: 0d7ba8ec070085748a14436121b570c8ded33513
 
 COCOAPODS: 1.2.0

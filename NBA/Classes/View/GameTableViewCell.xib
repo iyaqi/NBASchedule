@@ -18,8 +18,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="波士顿" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17P-kT-Diq">
-                        <rect key="frame" x="248" y="17" width="52" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="波士顿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17P-kT-Diq">
+                        <rect key="frame" x="232" y="17" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="zmz-6Q-ehl"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,13 +40,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黄蜂" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7n-hn-4GU">
-                        <rect key="frame" x="29" y="48" width="35" height="21"/>
+                        <rect key="frame" x="31" y="48" width="35" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="夏洛特" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWY-B8-ngt">
-                        <rect key="frame" x="20" y="17" width="52" height="21"/>
+                        <rect key="frame" x="8" y="17" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="A8f-7f-em2"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -55,7 +61,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="凯尔特人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqq-jS-oKz">
-                        <rect key="frame" x="239.5" y="48" width="69.5" height="21"/>
+                        <rect key="frame" x="237.5" y="48" width="69.5" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -71,9 +77,9 @@
                     <constraint firstItem="379-xx-7cI" firstAttribute="top" secondItem="Cfi-pi-lNc" secondAttribute="bottom" constant="5" id="SYt-ds-FyV"/>
                     <constraint firstItem="Tqq-jS-oKz" firstAttribute="top" secondItem="17P-kT-Diq" secondAttribute="bottom" constant="10" id="T6k-h6-bZl"/>
                     <constraint firstItem="f7n-hn-4GU" firstAttribute="centerX" secondItem="TWY-B8-ngt" secondAttribute="centerX" id="Yx4-fP-D0s"/>
-                    <constraint firstItem="TWY-B8-ngt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="eNN-ZK-FFZ"/>
+                    <constraint firstItem="TWY-B8-ngt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="eNN-ZK-FFZ"/>
                     <constraint firstItem="f7n-hn-4GU" firstAttribute="top" secondItem="TWY-B8-ngt" secondAttribute="bottom" constant="10" id="emY-fD-WWu"/>
-                    <constraint firstAttribute="trailing" secondItem="17P-kT-Diq" secondAttribute="trailing" constant="20" id="gK5-mk-pey"/>
+                    <constraint firstAttribute="trailing" secondItem="17P-kT-Diq" secondAttribute="trailing" constant="8" id="gK5-mk-pey"/>
                     <constraint firstItem="TWY-B8-ngt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="myk-S9-lze"/>
                     <constraint firstItem="379-xx-7cI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="npH-3V-IaJ"/>
                     <constraint firstItem="17P-kT-Diq" firstAttribute="top" secondItem="TWY-B8-ngt" secondAttribute="top" id="tol-kR-tYH"/>

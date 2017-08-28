@@ -11,11 +11,15 @@ import Alamofire
 import SwiftyJSON
 import NVActivityIndicatorView
 import SnapKit
+import EventKit
 
 
 class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndicatorViewable {
+    
     var code : String = "celtics"
     lazy var datas = [Game]()
+    
+    lazy var eventStore = EKEventStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +34,11 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
         self.tableView.register(UINib.init(nibName: "GameTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "schedule")
         self.tableView.tableFooterView = UIView()
         
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "导入日历", style: .done, target: self, action: #selector(NBATeamScheduleTableViewController.insertEventToCalendar))
+        
+        
         let header = UIView(frame: CGRect(x: 0, y: 0, width: self.view.width, height: 50))
-        print(self.view.width)
         self.tableView.tableHeaderView = header
         
         let homeLabel = UILabel()
@@ -116,6 +123,65 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
         }
     }
     
+    //插入到日历中
+    func insertEventToCalendar(){
+        self.eventStore .requestAccess(to: .event, completion: { (granted, error) in
+
+            //授权过
+            if granted{
+                self.saveEvent()
+            }
+        })
+    }
+    
+    func saveEvent(){
+        
+       
+        
+        let alertView = CKAlertViewController.alert(withTitle: nil, message: "导入到日历？")
+        
+        let cancelAction = CKAlertAction(title: "取消") { (action) in
+        }
+        let sureAction = CKAlertAction(title: "确定") { (action) in
+            
+            self.startAnimating(CGSize(width: 30, height: 30),type:.ballBeat,color: UIColor.init(hexString: "#E0486C"),backgroundColor:UIColor.white)
+            
+            DispatchQueue.global().async {
+            //把比赛写入日历
+//            print(self.eventStore)
+                for game in self.datas{
+                    
+                    let event = EKEvent(eventStore: self.eventStore)
+                    
+                    // 标题
+                    let title = game.homeTeamName! + "VS" + game.awayTeamName!
+                    event.title = title
+                    
+                    //时间
+                    let date = Date.init(timeIntervalSince1970: TimeInterval(Int64(game.gameDate!)!/1000))
+                    
+                    event.startDate = date
+                    event.endDate = date.addingTimeInterval(150*60)
+                    event.calendar = self.eventStore.defaultCalendarForNewEvents
+                    
+                    do{
+                        try self.eventStore.save(event, span: EKSpan.thisEvent)
+                    }catch let error as NSError{
+                        print(error)
+                    }
+                }
+                DispatchQueue.main.async {
+                    self.stopAnimating()
+                }
+            }
+        
+        }
+        alertView?.addAction(cancelAction)
+        alertView?.addAction(sureAction)
+        self.present(alertView!, animated: true, completion: nil)
+    }
+    
+    // MARK: - tableView
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
