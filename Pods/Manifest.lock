@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.5.0)
   - AlamofireNetworkActivityIndicator (2.2.0):
     - Alamofire (~> 4.5)
+  - CDAlertView (0.6.0)
   - ImageLoader (0.12.2)
   - NVActivityIndicatorView (3.7.0):
     - NVActivityIndicatorView/Presenter (= 3.7.0)
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
+  - CDAlertView
   - ImageLoader
   - NVActivityIndicatorView
   - ObjectMapper
@@ -28,6 +30,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireNetworkActivityIndicator: 81e1630e7cfed22a4e4e82a174c59e651dc4f8ca
+  CDAlertView: e6f365fa0fac7349197e7ea4bd7810c069215cf4
   ImageLoader: f461c9641350d0b8df39c2d3785b263f15cd63c2
   NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
@@ -36,6 +39,6 @@ SPEC CHECKSUMS:
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   zhPopupController: 6c3b0998b5402e4805a7fc30c0a7df09345bce89
 
-PODFILE CHECKSUM: 0d7ba8ec070085748a14436121b570c8ded33513
+PODFILE CHECKSUM: de11907efa7802849ff62846559b769c9dfd5280
 
 COCOAPODS: 1.2.0

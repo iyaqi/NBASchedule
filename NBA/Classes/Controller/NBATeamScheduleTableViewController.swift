@@ -12,14 +12,26 @@ import SwiftyJSON
 import NVActivityIndicatorView
 import SnapKit
 import EventKit
+import CDAlertView
 
 
 class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndicatorViewable {
     
-    var code : String = "celtics"
+    var team : Team
     lazy var datas = [Game]()
     
     lazy var eventStore = EKEventStore()
+    
+    init(team:Team) {
+        self.team =  team
+        super.init(style: .plain)
+        print(self.team.code!)
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +43,10 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
     }
     
     func initSubView(){
+        
+    
+        self.title = self.team.code?.capitalized
+        
         self.tableView.register(UINib.init(nibName: "GameTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "schedule")
         self.tableView.tableFooterView = UIView()
         
@@ -38,7 +54,7 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "导入日历", style: .done, target: self, action: #selector(NBATeamScheduleTableViewController.insertEventToCalendar))
         
         
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: self.view.width, height: 50))
+        let header = UIView(frame: CGRect(x: 0, y: 0, width:UIScreen.main.bounds.width , height: 50))
         self.tableView.tableHeaderView = header
         
         let homeLabel = UILabel()
@@ -80,7 +96,7 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
     
     func fetchSchedule(){
         startAnimating(CGSize(width: 30, height: 30),type:.ballBeat,color: UIColor.init(hexString: "#E0486C"),backgroundColor:UIColor.white)
-        Alamofire.request("http://china.nba.com/static/data/team/schedule_\(self.code).json").responseJSON { (response) in
+        Alamofire.request("http://china.nba.com/static/data/team/schedule_\(self.team.code!).json").responseJSON { (response) in
     
         // swiftJson的解析方式
         let json = JSON(response.result.value as Any)
@@ -127,16 +143,31 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
     func insertEventToCalendar(){
         self.eventStore .requestAccess(to: .event, completion: { (granted, error) in
 
-            //授权过
+            //授权过可以方位日历
             if granted{
-                self.saveEvent()
+                let tempArray = self.eventStore.calendars(for: .event)
+                var inserted = false
+                for calendar in tempArray{
+                    print(calendar)
+                    
+                    //判断是否已经导入了比赛内容
+                    if calendar.title == self.team.name {
+                        inserted = true
+                    }
+                }
+                
+                if !inserted {
+                    self.saveEvent()
+                }else{
+                    DispatchQueue.main.async {
+                        CDAlertView(title: "", message: "已经导入过该队比赛!", type: .notification).show()
+                    }
+                }
             }
         })
     }
     
     func saveEvent(){
-        
-       
         
         let alertView = CKAlertViewController.alert(withTitle: nil, message: "导入到日历？")
         
@@ -144,8 +175,22 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
         }
         let sureAction = CKAlertAction(title: "确定") { (action) in
             
+//             删除日历的事件
+//            let tempArray = self.eventStore.calendars(for: .event)
+//            for calendar in tempArray{
+//                print(calendar)
+//                if calendar.title == self.code {
+//                    do{
+//                        try self.eventStore.removeCalendar(calendar, commit: true)
+//                    }catch let error as NSError{
+//                        print(error)
+//                    }
+//                }
+//            }
+            
             self.startAnimating(CGSize(width: 30, height: 30),type:.ballBeat,color: UIColor.init(hexString: "#E0486C"),backgroundColor:UIColor.white)
             
+//            异步任务
             DispatchQueue.global().async {
             //把比赛写入日历
 //            print(self.eventStore)
@@ -162,7 +207,11 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
                     
                     event.startDate = date
                     event.endDate = date.addingTimeInterval(150*60)
-                    event.calendar = self.eventStore.defaultCalendarForNewEvents
+                    
+                    let calendar = self.eventStore.defaultCalendarForNewEvents
+                    calendar.title = self.team.name! + "赛程"
+                    calendar.cgColor = UIColor.purple.cgColor
+                    event.calendar = calendar
                     
                     do{
                         try self.eventStore.save(event, span: EKSpan.thisEvent)
@@ -170,6 +219,7 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
                         print(error)
                     }
                 }
+                //主线程刷新UI
                 DispatchQueue.main.async {
                     self.stopAnimating()
                 }

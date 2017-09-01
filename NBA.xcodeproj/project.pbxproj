@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4ABF1D82BADF558F29804B46 /* Pods_NBA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E0124AE16140D9D91E5095 /* Pods_NBA.framework */; };
+		8DD698A91F59C087005F9930 /* NBATeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD698A71F59C087005F9930 /* NBATeamTableViewCell.swift */; };
+		8DD698AA1F59C087005F9930 /* NBATeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DD698A81F59C087005F9930 /* NBATeamTableViewCell.xib */; };
 		8DEBB6931F52A34F00A33117 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB6861F52A34F00A33117 /* AppDelegate.swift */; };
 		8DEBB6941F52A34F00A33117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6871F52A34F00A33117 /* Assets.xcassets */; };
 		8DEBB6951F52A34F00A33117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB6881F52A34F00A33117 /* LaunchScreen.storyboard */; };
@@ -28,6 +30,8 @@
 		52D0ED7BF6A9EA113F513CFB /* Pods-NBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBA/Pods-NBA.debug.xcconfig"; sourceTree = "<group>"; };
 		69E0124AE16140D9D91E5095 /* Pods_NBA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBCA2D31F42D4E800D0B214 /* NBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD698A71F59C087005F9930 /* NBATeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBATeamTableViewCell.swift; sourceTree = "<group>"; };
+		8DD698A81F59C087005F9930 /* NBATeamTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NBATeamTableViewCell.xib; sourceTree = "<group>"; };
 		8DEBB6861F52A34F00A33117 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEBB6871F52A34F00A33117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DEBB6891F52A34F00A33117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			children = (
 				8DEBB6A01F52A38400A33117 /* GameTableViewCell.swift */,
 				8DEBB6A11F52A38400A33117 /* GameTableViewCell.xib */,
+				8DD698A71F59C087005F9930 /* NBATeamTableViewCell.swift */,
+				8DD698A81F59C087005F9930 /* NBATeamTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD698AA1F59C087005F9930 /* NBATeamTableViewCell.xib in Resources */,
 				8DEBB6A91F52B27600A33117 /* Team_Logo.json in Resources */,
 				8DEBB6951F52A34F00A33117 /* LaunchScreen.storyboard in Resources */,
 				8DEBB6A71F52A38400A33117 /* GameTableViewCell.xib in Resources */,
@@ -290,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD698A91F59C087005F9930 /* NBATeamTableViewCell.swift in Sources */,
 				8DEBB6931F52A34F00A33117 /* AppDelegate.swift in Sources */,
 				8DEBB6A31F52A38400A33117 /* NBATeamsTableViewController.swift in Sources */,
 				8DEBB6A21F52A38400A33117 /* NBATeamScheduleTableViewController.swift in Sources */,

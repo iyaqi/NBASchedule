@@ -17,6 +17,7 @@ class Team: Mappable {
     var division:String?  //分区
     var conference:String?  //联盟分区
     var displayConference:String? //联盟分区显示
+    var imageUrl:String? //球队图片
     
     required init?(map: Map) {
         

@@ -15,5 +15,6 @@ target 'NBA' do
   pod 'ImageLoader'
   pod 'SnapKit', '~> 3.2.0'
   pod 'zhPopupController', '~> 0.1.3'
-
+  pod "CDAlertView"
 end
+

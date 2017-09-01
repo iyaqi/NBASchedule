@@ -18,11 +18,14 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
     lazy var teamsData = [Array<Team>]()
     var logoInfo:[String:Any]?
     
+    private let TeamCellIdentifier = "nba_team"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.tableFooterView = UIView()
-        self.tableView.rowHeight = 50;
+        self.tableView.rowHeight = 80;
+        self.tableView.register(UINib.init(nibName: "NBATeamTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: TeamCellIdentifier)
         
         let path = Bundle.main.path(forResource: "Team_Logo", ofType: ".json")
         let logoJsonData = NSData(contentsOfFile: path!)
@@ -67,21 +70,19 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "nba_team")
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "nba_team")
-        }
+        let cell:NBATeamTableViewCell = tableView.dequeueReusableCell(withIdentifier: TeamCellIdentifier, for: indexPath) as! NBATeamTableViewCell
+        
         let teamsArray = self.teamsData[indexPath.section]
         let team = teamsArray[indexPath.row]
         
-        cell?.textLabel?.text = team.name
-        
+        //拼接图片的url
         let a = self.logoInfo?[team.code!]!
-        
         let imageUrlString = "http://mat1.gtimg.com/sports/nba/logo/1602/\(String(describing: a!)).png"
-        cell?.imageView?.load.request(with: imageUrlString)
+        team.imageUrl = imageUrlString
         
-        return cell!
+        cell.setContent(team)
+        
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,8 +91,7 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
         let teamsArray = self.teamsData[indexPath.section]
         let team = teamsArray[indexPath.row]
         
-        let teamScheduleView = NBATeamScheduleTableViewController()
-        teamScheduleView.code = team.code!
+        let teamScheduleView = NBATeamScheduleTableViewController(team: team)
         self.navigationController?.pushViewController(teamScheduleView, animated: true)
     }
     
@@ -102,7 +102,7 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 40
     }
 
 }
