@@ -22,7 +22,9 @@ class NBATeamsTableViewController: UITableViewController,NVActivityIndicatorView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.estimatedSectionHeaderHeight=0;
+        self.tableView.estimatedSectionFooterHeight=0;
         self.tableView.tableFooterView = UIView()
         self.tableView.rowHeight = 80;
         self.tableView.register(UINib.init(nibName: "NBATeamTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: TeamCellIdentifier)

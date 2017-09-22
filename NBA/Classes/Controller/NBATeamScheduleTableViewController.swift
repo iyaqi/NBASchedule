@@ -49,7 +49,8 @@ class NBATeamScheduleTableViewController: UITableViewController,NVActivityIndica
         
         self.tableView.register(UINib.init(nibName: "GameTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "schedule")
         self.tableView.tableFooterView = UIView()
-        
+        self.tableView.estimatedSectionHeaderHeight=0;
+        self.tableView.estimatedSectionFooterHeight=0;
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "导入日历", style: .done, target: self, action: #selector(NBATeamScheduleTableViewController.insertEventToCalendar))
         

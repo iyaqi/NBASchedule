@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ylc-LD-hgO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fbG-28-az0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NBA球队-->
+        <!--球队-->
         <scene sceneID="BfD-fM-hfQ">
             <objects>
                 <tableViewController id="tmt-dj-aNU" customClass="NBATeamsTableViewController" customModule="NBA" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,19 +32,20 @@
                             <outlet property="delegate" destination="tmt-dj-aNU" id="oAh-kI-REY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="NBA球队" id="gKF-XL-qli"/>
+                    <navigationItem key="navigationItem" title="球队" id="gKF-XL-qli"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1A-pJ-m4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="19"/>
+            <point key="canvasLocation" x="1151.2" y="18.440779610194905"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--赛程-->
         <scene sceneID="ZIF-rv-Top">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ylc-LD-hgO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="赛程" image="check" id="ygB-Se-ngP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mhP-uX-E7b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -54,7 +55,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1za-JB-zUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-140" y="53.523238380809602"/>
+            <point key="canvasLocation" x="199.19999999999999" y="53.523238380809602"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6IV-rC-4Ey">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fbG-28-az0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OMH-lI-zoE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ylc-LD-hgO" kind="relationship" relationship="viewControllers" id="XHh-T5-ykv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpr-A9-Zg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440" y="53.073463268365821"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="check" width="25" height="25"/>
+    </resources>
 </document>
